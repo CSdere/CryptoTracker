@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Crypto Tracker</title>
+</head>
+<body>
+    <h1 class="Title">Crypto Tracker</h1>
+    <div class="container">
+        <form action="/" id="form" method="POST">
+            <select name="crypto" id="crypto">
+                <option value="BTC-USD" >Bitcoin</option>
+                <option value="ETH-USD" >Ethereum</option>
+                <option value="SOL-USD" >Solana</option>
+                <option value="DOGE-USD" >Dogecoin</option>
+            </select>
+            <button type="submit" class="form-submit">Go</button>
+        </form>
+        <% if (locals.data) {%>
+        <h2><%= data %></h2>
+        <p>$ <%= price %></p>
+        <%}%>
+    </div>
+</body>
+</html>
